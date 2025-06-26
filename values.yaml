@@ -1,0 +1,12 @@
+name: jenkins
+persistence:
+  path: /Users/shivapb/Applications/jenkins
+  size: 4Gi
+
+service:
+  nodePort: 30080
+  agentPort: 30050
+
+image:
+  repository: jenkins/jenkins
+  tag: 2.504.3-lts-jdk21
