@@ -1,3 +1,4 @@
+##### Docker Installation #####
 docker network create jenkins
 
 docker run -d \
@@ -11,7 +12,7 @@ docker run -d \
 
 docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
-#####
+##### Helm Jenkins Remote Installation #####
 kubectl apply -f jenkins-pv.yaml #Cluster-wide resource
 kubectl apply -f jenkins-pvc.yaml #Namespace-scoped resource
 
@@ -22,4 +23,6 @@ helm install jenkins jenkins/jenkins -f jenkins-values.yaml -n tools --create-na
 
 helm upgrade --install jenkins jenkins/jenkins -n tools -f jenkins-values.yaml --create-namespace
 
-#####
+
+##### Helm local Jenkins Installation #####
+helm install jenkins ./jenkins-mac -n tools --create-namespace
