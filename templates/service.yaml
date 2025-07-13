@@ -4,6 +4,8 @@ metadata:
   name: {{ .Values.name }}
 spec:
   type: NodePort
+  selector:
+    app: {{ .Values.name }}
   ports:
     - name: http
       port: 8080
@@ -13,5 +15,3 @@ spec:
       port: 50000
       targetPort: 50000
       nodePort: {{ .Values.service.agentPort }}
-  selector:
-    app: {{ .Values.name }}
