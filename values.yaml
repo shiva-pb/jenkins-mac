@@ -10,4 +10,4 @@ service:
 
 image:
   repository: jenkins/jenkins
-  tag: 2.504.3-lts-jdk21
+  tag: 2.516.1-lts-jdk21
