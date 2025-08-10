@@ -27,3 +27,4 @@ helm upgrade --install jenkins jenkins/jenkins -n tools -f jenkins-values.yaml -
 ##### Helm local Jenkins Installation #####
 helm install jenkins ./jenkins-mac -n tools --create-namespace
 helm get manifest jenkins -n tools
+helm upgrade jenkins ./jenkins-mac -n tools
